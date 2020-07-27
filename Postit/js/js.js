@@ -72,7 +72,7 @@ function exibir () {
 }
 
 function ocultar () {
-    if (a == 1) {
+    if (a >= 1) {
         var diiv = document.getElementById("postit-criado")
         diiv.style.display = "none"
     } else {
