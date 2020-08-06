@@ -1,4 +1,5 @@
 let a = 0
+let b = 0
 function seila () {
     var lugar = document.getElementById("postit-criado")//Onde o postit fica
     var tarefa = document.getElementById("tarefa-digitada")//texto
@@ -39,9 +40,15 @@ function seila () {
         botaoEditar.innerHTML = "Editar"
         teste2.appendChild(botaoEditar)
         botaoEditar.onclick = function () {
-            alert("Modo De Edição. O valor do postit será mandado para \n a área de texto para ser editada.")
-            teste2.style.display = "none"
-            tarefa.value = tarefaEdit
+            if (b==0) {
+                alert("Modo De Edição. O valor do postit será mandado para \n a área de texto para ser editada.")
+                teste2.style.display = "none"
+                tarefa.value = tarefaEdit
+            } else {
+                teste2.style.display = "none"
+                tarefa.value = tarefaEdit
+            }
+            b++
         }
 
         var teste = document.createElement("div")//postit
